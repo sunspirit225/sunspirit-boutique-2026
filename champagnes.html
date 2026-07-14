@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sun Spirit — Champagnes</title>
+<meta name="description" content="Sun Spirit — Champagnes premium importe d'Europe, livraison Abidjan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+    <div class="brand"><a href="index.html">SUN SPIRIT</a></div>
+    <form class="search-form" id="searchForm" onsubmit="return false;">
+      <input type="text" class="search-input" id="searchInput" placeholder="Rechercher un produit...">
+      <div class="search-results" id="searchResults"></div>
+    </form>
+    <div class="header-right">
+      <button class="cart-btn" id="cartOpenBtn" aria-label="Panier">&#128722;<span class="cart-badge hidden" id="cartBadge">0</span></button>
+      <a class="nav-cta" href="https://wa.me/2250140970550" target="_blank" rel="noopener">Contact</a>
+    </div>
+  </div>
+</header>
+
+<div class="mega-overlay" id="megaOverlay"></div>
+<nav class="mega-menu" id="megaMenu">
+  <div class="mega-header">
+    <div class="brand">SUN SPIRIT</div>
+    <button class="mega-close" id="megaCloseBtn" aria-label="Fermer">&#10005;</button>
+  </div>
+  <div class="mega-section-title">Collections</div>
+  <ul class="mega-links">
+    <li><a href="whisky.html">Whisky <span class="arrow">&#8594;</span></a></li>
+    <li><a href="cognac.html">Cognac <span class="arrow">&#8594;</span></a></li>
+    <li><a href="tequila.html">Tequila <span class="arrow">&#8594;</span></a></li>
+    <li><a href="champagnes.html">Champagnes <span class="arrow">&#8594;</span></a></li>
+  </ul>
+  <div class="mega-section-title">Autres pages</div>
+  <ul class="mega-links">
+    <li><a href="carton.html">Carton / Gros <span class="arrow">&#8594;</span></a></li>
+    <li><a href="kits.html">Kits &amp; Coffrets <span class="arrow">&#8594;</span></a></li>
+    <li><a href="galerie.html">Galerie <span class="arrow">&#8594;</span></a></li>
+    <li><a href="index.html#events">Events &amp; Corporate <span class="arrow">&#8594;</span></a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb"><a href="index.html">Accueil</a> / Champagnes</div>
+<section class="category" id="Champagnes">
+  <div class="cat-eyebrow">04 — Collection</div>
+  <h2 class="cat-title">Champagnes</h2>
+  <p class="cat-desc">Nos champagnes disponibles a la bouteille. Pour l'achat au carton, direction l'onglet Carton / Gros.</p>
+  <div class="product-grid" id="grid-Champagnes"></div>
+</section>
+<footer>
+  <div class="brand-foot">SUN SPIRIT</div>
+  <div class="contact-grid">
+    <div><span>Appel</span>07 03 945 608</div>
+    <div><span>WhatsApp</span>01 40 97 05 50</div>
+    <div><span>Adresse</span>Cocody, Abidjan</div>
+  </div>
+  <a href="index.html" class="fine">&#8593; Retour a l'accueil</a>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Votre panier</h3>
+    <button class="cart-close" id="cartCloseBtn" aria-label="Fermer">&#10005;</button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div class="cart-empty">Votre panier est vide.</div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-value" id="cartTotalValue">0 CFA</span>
+    </div>
+    <button class="cart-whatsapp-btn" id="cartWhatsappBtn" disabled>Commander sur WhatsApp</button>
+    <button class="cart-clear" id="cartClearBtn">Vider le panier</button>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function(){ renderProductGrid('Champagnes'); });</script>
+</body>
+</html>

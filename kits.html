@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sun Spirit — Kits & Coffrets</title>
+<meta name="description" content="Sun Spirit — Coffrets prestige et configurateur de kit sur mesure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">&#9776;</button>
+    <div class="brand"><a href="index.html">SUN SPIRIT</a></div>
+    <form class="search-form" id="searchForm" onsubmit="return false;">
+      <input type="text" class="search-input" id="searchInput" placeholder="Rechercher un produit...">
+      <div class="search-results" id="searchResults"></div>
+    </form>
+    <div class="header-right">
+      <button class="cart-btn" id="cartOpenBtn" aria-label="Panier">&#128722;<span class="cart-badge hidden" id="cartBadge">0</span></button>
+      <a class="nav-cta" href="https://wa.me/2250140970550" target="_blank" rel="noopener">Contact</a>
+    </div>
+  </div>
+</header>
+
+<div class="mega-overlay" id="megaOverlay"></div>
+<nav class="mega-menu" id="megaMenu">
+  <div class="mega-header">
+    <div class="brand">SUN SPIRIT</div>
+    <button class="mega-close" id="megaCloseBtn" aria-label="Fermer">&#10005;</button>
+  </div>
+  <div class="mega-section-title">Collections</div>
+  <ul class="mega-links">
+    <li><a href="whisky.html">Whisky <span class="arrow">&#8594;</span></a></li>
+    <li><a href="cognac.html">Cognac <span class="arrow">&#8594;</span></a></li>
+    <li><a href="tequila.html">Tequila <span class="arrow">&#8594;</span></a></li>
+    <li><a href="champagnes.html">Champagnes <span class="arrow">&#8594;</span></a></li>
+  </ul>
+  <div class="mega-section-title">Autres pages</div>
+  <ul class="mega-links">
+    <li><a href="carton.html">Carton / Gros <span class="arrow">&#8594;</span></a></li>
+    <li><a href="kits.html">Kits &amp; Coffrets <span class="arrow">&#8594;</span></a></li>
+    <li><a href="galerie.html">Galerie <span class="arrow">&#8594;</span></a></li>
+    <li><a href="index.html#events">Events &amp; Corporate <span class="arrow">&#8594;</span></a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb"><a href="index.html">Accueil</a> / Kits &amp; Coffrets</div>
+<section class="category" id="kits">
+  <div class="cat-eyebrow">Kits Prestige</div>
+  <h2 class="cat-title">Kits &amp; Coffrets</h2>
+
+  <div class="europe-banner">
+    <span class="flag">&#127466;&#127482;</span>
+    <span class="txt">100% importe d'Europe — Qualite et tracabilite garanties</span>
+  </div>
+
+  <p class="kits-intro">
+    Des coffrets deja composes pour aller a l'essentiel, ou un configurateur pour creer le votre,
+    bouteille par bouteille ou carton par carton, a partir de tout notre catalogue.
+  </p>
+
+  <div class="kits-grid" id="kitsGrid"></div>
+
+  <div class="kits-divider">
+    <div class="cat-eyebrow">Sur mesure</div>
+    <h3>Composez votre propre kit</h3>
+    <p>Choisissez vos bouteilles et vos quantites dans tout notre catalogue. Le recapitulatif et le total se mettent a jour automatiquement — il ne reste qu'a envoyer votre commande sur WhatsApp.</p>
+  </div>
+
+  <div class="configurator">
+    <div class="config-tabs" id="configTabs"></div>
+    <div class="config-layout">
+      <div class="config-list" id="configList"></div>
+      <div class="config-detail" id="configDetail"></div>
+    </div>
+    <div class="order-slip">
+      <div class="order-slip-title">Votre selection</div>
+      <div id="orderSlipBody"><div class="order-slip-empty">Aucun article ajoute pour l'instant.</div></div>
+      <div class="config-summary">
+        <div class="config-summary-total" id="configTotal">0 CFA</div>
+        <button type="button" class="config-order-btn" id="configOrderBtn" disabled>Commander sur WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="brand-foot">SUN SPIRIT</div>
+  <div class="contact-grid">
+    <div><span>Appel</span>07 03 945 608</div>
+    <div><span>WhatsApp</span>01 40 97 05 50</div>
+    <div><span>Adresse</span>Cocody, Abidjan</div>
+  </div>
+  <a href="index.html" class="fine">&#8593; Retour a l'accueil</a>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3>Votre panier</h3>
+    <button class="cart-close" id="cartCloseBtn" aria-label="Fermer">&#10005;</button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div class="cart-empty">Votre panier est vide.</div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-value" id="cartTotalValue">0 CFA</span>
+    </div>
+    <button class="cart-whatsapp-btn" id="cartWhatsappBtn" disabled>Commander sur WhatsApp</button>
+    <button class="cart-clear" id="cartClearBtn">Vider le panier</button>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script>document.addEventListener('DOMContentLoaded', function(){ renderKits(); initConfigurator(); });</script>
+</body>
+</html>
